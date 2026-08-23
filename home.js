@@ -1,221 +1,626 @@
-//1 the difference between ==, ===, and Object.is() in JavaScript//
-2 == "2";
-console.log(2 == "2")
+//Write a program to check whether a given number is positive, negative, or zero.
+let a = -5;
 
-2 === "2";
-console.log(2 === "2")
-
-
-
-// 2 How does the ?? operator differ from the || operator//
-
-const count = 0;
-console.log(0 || 10)
-console.log(0 ?? 10)
-
-
-// 3 What is the output of 0 || 10 and 0 ?? 10, and why//
-
-//The logical operator//
-const val1 = 0 || 10;
-console.log(0 || 10)
-
-//Nullish operator//
-const val2 = 0 ?? 10;
-console.log(0 ?? 10)
-
-// 4 What is the order of evaluation in let x = 5; let y = x++ + ++x + x//
-
-let x = (5 + 2);
-console.log(x)
-
-let y = (5 + 7 + 7);
-console.log(y)
-
-// 5 How does operator precedence affect true && false || true && !false//
-
-let a = !2;
-
-console.log(a)
-
-let b = 2;
-console.log(a && b)
-
-// 6 Why does [] == false return true, while [] === false returns false//
-
-const myArray = [];
-if (myArray.length === 0) {
-    console.log("the array is Empty");
+if ( a > 0) {
+    console.log("Positive");
+} else if ( a < 0) {
+    console.log("Negative");
+} else {
+    console.log("Zero");
 }
 
+//Write a program to check whether a person is eligible to vote based on their age.
+let age = 20;
 
-const data = [];
-if (Array.isArray(data) && data.length === 0) {
-    console.log("This is definitely empty array")
+if (age >= 18) {
+    console.log("Eligible to vote");
+} else {
+    console.log("Not eligible to vote");
 }
 
-// 7  the results of null == undefined, null === undefined, null == 0, and null >= 0//
+//Write a program to check whether a number is even or odd without using any built-in functions.
+let num = 7;
 
-null >= 0;
-console.log(null >= 0)
+if (num % 2 === 0) {
+    console.log("Even");
+} else {
+    console.log("Odd");
+}
 
-null == 0;
-console.log(null == 0)
+//Write a program to find the greater of two numbers using if-else.
+let y = 25;
+let b = 15;
 
+if (a > b) {
+    console.log(a + " is greater");
+} else if (b > a) {
+    console.log(b + " is greater");
+} else {
+    console.log("Both are equal");
+}
 
-// 8 What is the difference between obj?.property and obj && obj.property//
+//Write a program to find the largest of three numbers using if-else if-else.
+let d = 10;
+let g= 25;
+let c = 15;
 
-// the difference between obj//undefined
-const emptyuser = null;
-console.log(emptyuser?.null)
+if (a >= b && a >= c) {
+    console.log(a + " is largest");
+} else if (b >= a && b >= c) {
+    console.log(b + " is largest");
+} else {
+    console.log(c + " is largest");
+}
 
-//property and obj && obj.property// 0
-const username = 0;
-console.log(username && username);
+//Write a program to check whether a given year is a leap year.
+let year = 2024;
 
-// 9 How do obj.method?.(), obj?.method(), and obj?.method?.() diffe//
+if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+    console.log("Leap Year");
+} else {
+    console.log("Not a Leap Year");
+}
 
-let user = { name: "vikram" }
-console.log(user);
+//Write a program to calculate a student's grade based on marks:
+let marks = 85;
 
-const apiResponce = {
-    package: 200,
-    data: {
-        getuser: null
+if (marks >= 90 && marks <= 100) {
+    console.log("Grade A");
+} else if (marks >= 80) {
+    console.log("Grade B");
+} else if (marks >= 70) {
+    console.log("Grade C");
+} else if (marks >= 60) {
+    console.log("Grade D");
+} else {
+    console.log("Grade F");
+}
+
+//Write a program to check whether a person is eligible for a driving license based on their age.
+let u = 20;
+
+if (u >= 18) {
+    console.log("Eligible for driving license");
+} else {
+    console.log("Not eligible for driving license");
+}
+
+//Write a program to check whether a number is divisible by both 3 and 5.
+let an = 30;
+
+if ( an % 3 === 0 && an % 5 === 0) {
+    console.log("Divisible by both 3 and 5");
+} else {
+    console.log("Not divisible by both 3 and 5");
+}
+
+//Write a program to check whether a given character is a vowel or consonant.
+let ch = "a";
+
+if (
+    ch === "a" || ch === "e" || ch === "i" ||
+    ch === "o" || ch === "u"
+) {
+    console.log("Vowel");
+} else {
+    console.log("Consonant");
+}
+
+//Write a program to calculate an electricity bill using different rates based on the number of units consumed?
+let nk = 30;
+
+if (nk % 7 === 0 && nk % 5 === 0) {
+    console.log("Divisible by both 7 and 5");
+} else {
+    console.log("Not divisible by both 7 and 5");
+}
+//Write a program to calculate a discount based on the purchase amount:
+let units = 250;
+let bill;
+
+if (units <= 100) {
+    bill = units * 5;
+} else if (units <= 200) {
+    bill = (100 * 5) + ((units - 100) * 7);
+} else {
+    bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
+}
+console.log("Electricity Bill = ₹" + bill);
+
+//Write a program to calculate the final price after discount and display the discount amount and final amount.
+let amount = 12000;
+let discount;
+
+if (amount > 10000) {
+    discount = amount * 20 / 100;
+} else if (amount >= 5000) {
+    discount = amount * 10 / 100;
+} else {
+    discount = 0;
+}
+
+let finalAmount = amount - discount;
+
+console.log("Discount = ₹" + discount);
+console.log("Final Amount = ₹" + finalAmount);
+
+//Write a program to check whether three given sides can form a valid triangle.
+let l = 5;
+let p = 6;
+let o = 7;
+
+if (l + p > o && b + o > l && l + p > o) {
+    console.log("Valid Triangle");
+} else {
+    console.log("Invalid Triangle");
+}
+
+//Write a program to determine whether a triangle is equilateral, isosceles, or scalene.
+let j = 5;
+let m = 5;
+let k = 7;
+
+if (j === m && m === k) {
+    console.log("Equilateral Triangle");
+} else if (j === m || k === m || j === k) {
+    console.log("Isosceles Triangle");
+} else {
+    console.log("Scalene Triangle");
+}
+
+//Write a program to determine whether a triangle is acute, right-angled, or obtuse using its three sides
+let x = 3;
+y = 4;
+ z = 5;
+
+if (x + y <= z || x + z <= y || y + z <= x) {
+    console.log("Invalid Triangle");
+} else {
+    let x = a * a;
+     y = b * b;
+     z = c * c;
+
+    if (x + y === z || x + z === y || y + z === x) {
+        console.log("Right-Angled Triangle");
+    } else if (x + y > z && x + z > y && y + z > x) {
+        console.log("Acute Triangle");
+    } else {
+        console.log("Obtuse Triangle");
     }
-};
+}
 
-console.log(apiResponce)
+//Write a program to find the middle value among three different numbers.
+let v = 10;
+ b = 20;
+ c = 15;
 
-const userRole = apiResponce.data?.gateuser?.gateRole?.() ?? "guest";
+if ((v > b && v < c) || (v < b && v > c)) {
+    console.log("Middle = " + a);
+} else if ((b > a && b < c) || (b < a && b > c)) {
+    console.log("Middle = " + b);
+} else {
+    console.log("Middle = " + c);
+}
 
-console.log(userRole)
+//Write a program to check whether a given number is a two-digit, three-digit, or other number.
+let n = 125;
 
-const tags = apiResponce.data?.gateuser?.gateTags?.() ?? [];
-console.log(tags)
+if (n >= 10 && n <= 99) {
+    console.log("Two-digit number");
+} else if (num >= 100 && num <= 999) {
+    console.log("Three-digit number");
+} else {
+    console.log("Other number");
+}
 
+//Write a program to calculate an employee's bonus based on years of experience and salary.
+let salary = 50000;
+ experience = 7;
+if (experience >= 10) {
+    bonus = salary * 20 / 100;
+} else if (experience >= 5) {
+    bonus = salary * 10 / 100;
+} else {
+    bonus = salary * 5 / 100;
+}
+console.log("Bonus = ₹" + bonus);
 
-//
-let score = 85;
+//Write a program to determine whether an employee is eligible for a salary increment based on their performance rating.
+let rating = 4;
 
-let grade = score >= 90 ? "A" 
-          : score >= 80 ? "B" 
-          : "C";
-console.log(grade)
+if (rating >= 4) {
+    console.log("Eligible for salary increment");
+} else {
+    console.log("Not eligible for salary increment");
+}
 
+//Write a program to create a simple ATM withdrawal system that checks balance, withdrawal amount, and minimum balance.
+let balance = 10000;
+let withdrawal = 3000;
+let minimumBalance = 1000;
 
+if (withdrawal <= 0) {
+    console.log("Invalid withdrawal amount");
+} else if (withdrawal > balance) {
+    console.log("Insufficient balance");
+} else if (balance - withdrawal < minimumBalance) {
+    console.log("Minimum balance must be maintained");
+} else {
+    balance = balance - withdrawal;
+    console.log("Withdrawal successful");
+    console.log("Remaining Balance = ₹" + balance);
+}
 
-// 11 Why does typeof null return "object//
-const value = null;
-console.log(typeof value === "object")
+//Write a program to create a login system that checks username and password using if-else.
+let username = "admin";
+let password = "1234";
 
-//hat happens when the delete operator is used with optional chaining//
-const user1 = { profile: { name: 'vikram' } };
-const result1 = delete user1.profile?.name;
+if (username === "admin" && password === "1234") {
+    console.log("Login Successful");
+} else {
+    console.log("Invalid Username or Password");
+}
 
-console.log("result1:", result1);
+//Write a program to check whether a user can access a website based on their age and membership status.
+let countage = 22;
+let type = true;
 
-console.log("result1:", user1.profile);
+if (countage >= 18 && type === true) {
+    console.log("Access Granted");
+} else {
+    console.log("Access Denied");
+}
 
+//Write a program to calculate a taxi fare based on the distance travelled, using different rates for different distance ranges.
+let distance = 20;
+let fare;
 
-// 12 How do &, |, ^, and ~ work with JavaScript numbers//
+if (distance <= 5) {
+    fare = distance * 10;
+} else if (distance <= 15) {
+    fare = (5 * 10) + ((distance - 5) * 8);
+} else {
+    fare = (5 * 10) + (10 * 8) + ((distance - 15) * 6);
+}
 
-// & work //
-const s = 5;
-const v = 3;
-console.log(s & v);
-// | work//
-const p = 5;
-const q = 3;
-console.log(p | q);
-// work ^ //
-const c = 5;
-const d = 3;
-console.log(c ^ d);
-// work ~ //
-const m = 5;
-const n = 3;
-console.log(~m);
+console.log("Taxi Fare = ₹" + fare);
 
-// 14 the difference between >> and >>>//
+//Write a program to calculate a movie ticket price based on age and whether it is a weekend.
+if (age < 13) {
+        basePrice = 8;  
+    console.log("Child on Weekday (Age 10");
+    } else if (age >= 65) {
+        basePrice = 10; 
+        console.log("Adult on Weekday (Age 25");    
+    } else {
+        basePrice = 15;  
+        console.log("Senior on Weekday (Age 70"); 
+    }
+//Write a program using switch to create a simple calculator for +, -, *, and /.
+let r = 20;
+ i = 5;
+ operator = "*";
 
-// High-Performance Math (>>)//
+switch (operator) {
+    case "+":
+        console.log(a + i);
+        break;
 
-let strength = 25;
-let halfstrength1 = Math.floor(strength / 2);
-let halfstrength2 = strength >> 1;
+    case "-":
+        console.log(r - i);
 
-console.log(-25 >> 1);
+    case "*":
+        console.log(r * i);
+        break;
 
-//  15 Pixel & Color Manipulation (>>>)//
+    case "/":
+        console.log(r / i);
+        break;
 
-let pixelcolor = 0xff34A17B;
-let redchannel = (pixelcolor >>> 16) & 0xff;
+    default:
+        console.log("Invalid Operator");
+}
 
-console.log(redchannel);
+//Write a program using switch to display the day of the week based on a number from 1 to 7.
+function getDayOfWeek(dayNumber) {
+    switch (dayNumber) {
+        case 1: console.log("Monday"); break;
+        case 2: console.log("Tuesday"); break;
+        case 3: console.log("Wednesday"); break;
+        case 4: console.log("Thursday"); break;
+        case 5: console.log("Friday"); break;
+        case 6: console.log("Saturday"); break;
+        case 7: console.log("Sunday"); break;
+        default: console.log("Invalid day number (1-7)");
+    }
+}
 
-//16 does 2 ** 3 ** 2 produce a different result from (2 ** 3) ** 2//
+//Write a program using switch to display the month name and number of days based on the month number.
+function getMonthInfo(monthNumber, isLeapYear = false) {
+    switch (monthNumber) {
+        case 1: console.log("January - 31 days"); break;
+        case 2: console.log(`February - ${isLeapYear ? 29 : 28} days`); break;
+        case 3: console.log("March - 31 days"); break;
+        case 4: console.log("April - 30 days"); break;
+        case 5: console.log("May - 31 days"); break;
+        case 6: console.log("June - 30 days"); break;
+        case 7: console.log("July - 31 days"); break;
+        case 8: console.log("August - 31 days"); break;
+        case 9: console.log("September - 30 days"); break;
+        case 10: console.log("October - 31 days"); break;
+        case 11: console.log("November - 30 days"); break;
+        case 12: console.log("December - 31 days"); break;
+        default: console.log("Invalid month number (1-12)");
+    }
+}
 
-//does 2 ** 3 ** 2 produce//
-const math = (2 ** 3 ** 2)
-console.log(2 ** 3 ** 2);
-//from (2 ** 3) ** 2//
-const num = ((2 ** 3) ** 2);
-console.log((2 ** 3) ** 2);
+//Write a program using switch to create a menu-driven food ordering system with different prices for different items.
+function orderFood(choice) {
+    let item, price;
+    switch (choice) {
+        case 1:
+            item = "Burger";
+            price = 5.99;
+            break;
+        case 2:
+            item = "Pizza";
+            price = 8.99;
+            break;
+        case 3:
+            item = "Pasta";
+            price = 7.49;
+            break;
+        case 4:
+            item = "Salad";
+            price = 4.50;
+            break;
+        default:
+            console.log("Invalid item choice.");
+            return;
+    }
+    console.log(`You ordered ${item}. Total price: $${price}`);
+}
 
-//Why is -2 ** 2 invalid JavaScript//
-const result = (-2) ** 2;
-console.log(result);
+//Write a program using switch to convert a number from 1–5 into its corresponding English word.
+let nu = 4;
 
-// 17 How do +=, -=, *=, **=, &&=, ||=, and ??= differ//
+switch (nu) {
+    case 1:
+        console.log("One");
+        break;
+    case 2:
+        console.log("Two");
+        break;
+    case 3:
+        console.log("Three");
+        break;
+    case 4:
+        console.log("Four");
+        break;
+    case 5:
+        console.log("Five");
+        break;
+    default:
+        console.log("Invalid number");
+}
 
-// do +=, -=, *=, **=//
-let w = 10;
-w += 5;
-w -= 3;
-w *= 2;
-w **= 2;
-console.log(w)
+//Write a program using switch to determine whether a given character is a vowel.
+let ap = "a";
 
-//&&=, ||=, and ??=//
-//&&=//
-let guest = false;
-guest &&= "user123"
-console.log(guest);
+switch (ap.toLowerCase()) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        console.log("Vowel");
+        break;
 
-// ||=//
+    default:
+        console.log("Not a vowel");
+}
 
-let val = 0;
-val ||= 10;
-console.log(val);
+//Write a program using switch to calculate different area formulas based on the user's choice of shape.
+let choice = 2;
+let area;
 
-// ?? //
+switch (choice) {
+    case 1:
+        let side = 5;
+        area = side * side;
+        console.log("Area of Square =", area);
+        break;
 
-let conectionLimit = 0;
-conectionLimit ??= 10;
-console.log(conectionLimit)
+    case 2:
+        let length = 10;
+         breadth = 5;
+        area = length * breadth;
+        console.log("Area of Rectangle =", area);
+        break;
 
-// 18 can't ?? be directly combined with || or && without parentheses//
+    case 3:
+        let radius = 7;
+        area = 3.14 * radius * radius;
+        console.log("Area of Circle =", area);
+        break;
 
-const user3 = null;
-const backup = "Guest"
-console.log(user3 ?? backup) || "anonymous"
+    case 4:
+        let base = 10;
+         height = 6;
+        area = 0.5 * base * height;
+        console.log("Area of Triangle =", area);
+        break;
 
+    default:
+        console.log("Invalid choice");
+}
 
+//Write a program that accepts a temperature and unit (C, F, or K) and converts it to the other units using conditional statements.
+let temperature = 100;
+ unit = "C";
 
-// 19 How does JavaScript evaluate "10" + 5 * 2 + 3//
+if (unit === "C") {
+    let fahrenheit = (temperature * 9 / 5) + 32;
+     kelvin = temperature + 273.15;
 
-const result5 = "10" + 5 * 2 + 3;
-console.log(result5)
+    console.log("Fahrenheit =", fahrenheit);
+    console.log("Kelvin =", kelvin);
 
+} else if (unit === "F") {
+    let celsius = (temperature - 32) * 5 / 9;
+     kelvin = celsius + 273.15;
 
-// 20 What are the results of 1 < 2 < 3 and 3 > 2 > 1, and why//
+    console.log("Celsius =", celsius);
+    console.log("Kelvin =", kelvin);
 
-//the results of 1 < 2 < 3// out put is true
-const result6 = (1 < 2) && (2 < 3);
-console.log(result6)
+} else if (unit === "K") {
+    let celsius = temperature - 273.15;
+     fahrenheit = (celsius * 9 / 5) + 32;
 
-//3 > 2 > 1,// output is false
+    console.log("Celsius =", celsius);
+    console.log("Fahrenheit =", fahrenheit);
 
-const result7 = (3 > 2) && (1 > 2);
-console.log(result7)
+} else {
+    console.log("Invalid unit");
+}
+
+//Write a program to calculate shipping charges based on package weight and delivery type.
+let weight = 4;
+ deliveryType = "express";
+   let charge;
+
+if (weight <= 1) {
+    charge = 50;
+} else if (weight <= 5) {
+    charge = 100;
+} else {
+    charge = 200;
+}
+if (deliveryType === "express") {
+    charge = charge + 100;
+}
+console.log("Shipping Charge = ₹" + charge);
+
+//Write a program to determine a customer's loan eligibility based on age, salary, and credit score.
+let vk = 25;
+ salary = 30000;
+ creditScore = 750;
+
+if (vk >= 21 && salary >= 25000 && creditScore >= 700) {
+    console.log("Loan Eligible");
+} else {
+    console.log("Loan Not Eligible");
+}
+
+//Write a program to calculate income tax based on different salary ranges.
+let side = 800000;
+let tX
+
+if (side <= 250000) {
+    tax = 0;
+} else if (side <= 500000) {
+    tax = side * 0.05;
+} else if (side <= 1000000) {
+    tax = side * 0.20;
+} else {
+    tax = side * 0.30;
+}
+console.log("Income Tax = ₹" + tax);
+
+//Write a program to validate a password using conditional statements. Check whether it has the required length, number, and special character.
+let pass = "Hello@123";
+
+let hasNumber = false;
+let hasSpecial = false;
+
+for (let i = 0; i < pass.length; i++) {
+
+    if (pass[i] >= "0" && pass[i] <= "9") {
+        hasNumber = true;
+    }
+
+    if ("!@#$%^&*".includes(pass[i])) {
+        hasSpecial = true;
+    }
+}
+
+if (pass.length >= 8 && hasNumber && hasSpecial) {
+    console.log("Valid Password");
+} else {
+    console.log("Invalid Password");
+}
+
+//Write a program to calculate a student's result based on marks in three subjects, checking both the average and whether the student passed every subject.
+let math = 60;
+let english = 55;
+let science = 70;
+
+let average = (math + english + science) / 3;
+
+if (math >= 35 && english >= 35 && science >= 35 && average >= 40) {
+    console.log("Result: PASS");
+    console.log("Average =", average);
+} else {
+    console.log("Result: FAIL");
+    console.log("Average =", average);
+}
+
+//Write a program for a restaurant billing system that calculates the bill, applies different discounts based on the total, and adds a service charge.
+let tip = 2500;
+let discoun;
+
+if (tip >= 2000) {
+    discount = tip * 0.20;
+} else if (tip >= 1000) {
+    discount = tip * 0.10;
+} else {
+    discount = 0;
+}
+
+let afterDiscount = tip - discount;
+let serviceCharge = afterDiscount * 0.05;
+let finalBill = afterDiscount + serviceCharge;
+
+console.log("Original tip = ₹" + bill);
+console.log("Discount = ₹" + discount);
+console.log("Service Charge = ₹" + serviceCharge);
+console.log("Final tip = ₹" + finalBill);
+
+//Write a banking menu program using switch for Deposit, Withdraw, Check Balance, and Exit, with appropriate conditional checks for each operation.
+let choic = 1;
+let balanc= 5000;
+let amoun = 2000;
+
+switch (choic) {
+
+    case 1:
+        if (amoun > 0) {
+            balanc = balanc + amoun;
+            console.log("Deposit Successful");
+            console.log("Balanc = ₹" + balanc);
+        } else {
+            console.log("Invalid amoun");
+        }
+        break;
+
+    case 2:
+        if (amount > 0 && amoun <= balanc) {
+            balanc = balanc - amoun;
+            console.log("Withdrawal Successful");
+            console.log("Balance = ₹" + balanc);
+        } else {
+            console.log("Insufficient Balanc or Invalid Amout");
+        }
+        break;
+
+    case 3:
+        console.log("Current Balanc = ₹" + balanc);
+        break;
+
+    case 4:
+        console.log("Thank you for using the bank");
+        break;
+
+    default:
+        console.log("Invalid choic");
+}
